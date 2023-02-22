@@ -13,9 +13,14 @@ public class Base {
 	public Properties prop;
 
 	public WebDriver initializeDriver() throws IOException {
+
+		// code for driving value from .propertiesfile
+
 		prop = new Properties();
+
 		FileInputStream fis = new FileInputStream(
 				"D:\\tools\\Java\\TestvagrantDemo\\src\\main\\java\\resorce\\data.properties");
+
 		prop.load(fis);
 
 		System.out.println(prop.getProperty("browser")); // chrome
